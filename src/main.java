@@ -99,7 +99,7 @@ public class main extends Application {
 		 * 		 TIPS: Börja i mitten och gå snett uppåt.
 		 */
 		
-		int ringar = 15;
+		int ringar = 300;
 
 		for(int v = ringar; v >= 0; v--){
 			
@@ -118,8 +118,8 @@ public class main extends Application {
 		
 			for(int d = 0; d < ringar; d++){
 				
-				herrn.setTranslateX(WIDTH/2);
-				herrn.setTranslateY(HEIGHT/2);
+				herrn.setTranslateX(v);
+				herrn.setTranslateY(v);
 				
 				
 			}
@@ -134,7 +134,7 @@ public class main extends Application {
 		 * 		 Sedan måste mellanrummet mellan ringarna minska också...
 		 */
 
-		int rings = 300;
+		int rings = 200;
 		
 		for (int i = rings; i >= 0; i--) {
 
@@ -150,8 +150,9 @@ public class main extends Application {
 
 			root.getChildren().add(bigboy);
 			
-			bigboy.setTranslateX(i);
-			bigboy.setTranslateY(i);
+			bigboy.setTranslateX(WIDTH/2);
+			bigboy.setTranslateY(HEIGHT/2);
+			
 
 		}
 
