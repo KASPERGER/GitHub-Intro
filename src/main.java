@@ -44,7 +44,7 @@ public class main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		// Ändra siffran här nere till 1,2,3 eller 4 beroende på vilken vy du vill se!
-		makeView3();
+		makeView4();
 
 		primaryStage.setScene(new Scene(root, WIDTH, HEIGHT));
 		primaryStage.show();
@@ -165,6 +165,38 @@ public class main extends Application {
 		 * eller hur??
 		 */
 
+		
+		int rad = 10;
+		int gollum = 10;
+		
+		double bredd = WIDTH/rad;
+		double höjd = HEIGHT/gollum;
+		
+		for(int deg = 0; deg < rad; deg++){
+			
+			for(int oha = 0; oha < gollum; oha++){
+				
+				Circle tja = new Circle(bredd);
+				
+				tja.setTranslateX(oha * bredd);
+				tja.setTranslateY(deg * höjd);
+				
+				int r = (int) (Math.random() * 255);
+				int g = (int) (Math.random() * 255);
+				int b = (int) (Math.random() * 255);
+				tja.setFill(Color.rgb(r, g, b));
+				
+				root.getChildren().add(tja);
+				
+				
+			}
+			
+			
+		}
+		
+		
+		
+		
 	}
 
 	public static void main(String[] args) {
