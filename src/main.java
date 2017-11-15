@@ -134,22 +134,24 @@ public class main extends Application {
 		 * 		 Sedan måste mellanrummet mellan ringarna minska också...
 		 */
 
-		int rings = 200;
-
-	
+		int rings = 300;
 		
 		for (int i = rings; i >= 0; i--) {
 
 			double radius = WIDTH / rings / 2;
 			
-			Circle cir = new Circle(i * radius);
+			Circle bigboy = new Circle(i * radius);
 
 			int r = (int) (Math.random() * 255);
 			int g = (int) (Math.random() * 255);
 			int b = (int) (Math.random() * 255);
-			cir.setFill(Color.rgb(r, g, b));
+			
+			bigboy.setFill(Color.rgb(r, g, b));
 
-			root.getChildren().add(cir);
+			root.getChildren().add(bigboy);
+			
+			bigboy.setTranslateX(i);
+			bigboy.setTranslateY(i);
 
 		}
 
