@@ -169,8 +169,8 @@ public class main extends Application {
 		int rad = 10;
 		int gollum = 10;
 		
-		double bredd = WIDTH/rad;
-		double höjd = HEIGHT/gollum;
+		double bredd = 350/rad;
+		double höjd = 350/gollum;
 		
 		for(int deg = 0; deg < rad; deg++){
 			
@@ -178,8 +178,8 @@ public class main extends Application {
 				
 				Circle tja = new Circle(bredd);
 				
-				tja.setTranslateX(oha * bredd);
-				tja.setTranslateY(deg * höjd);
+				tja.setTranslateX(oha * bredd*2);
+				tja.setTranslateY(deg * höjd*2);
 				
 				int r = (int) (Math.random() * 255);
 				int g = (int) (Math.random() * 255);
